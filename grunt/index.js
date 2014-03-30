@@ -7,7 +7,6 @@
     registerMarkedMan: function(taskName, grunt, input, output) {
       var binPath;
       binPath = path.join(__dirname, '..', 'node_modules', 'marked-man', 'bin');
-      console.log(binPath);
       return grunt.registerTask(taskName, function() {
         var done;
         done = this.async();
