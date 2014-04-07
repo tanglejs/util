@@ -26,3 +26,10 @@ module.exports =
         throw error if error
         grunt.file.write output, result.stdout
         done()
+
+  # Run a function in a different grunt base path
+  # Not async safe.
+  inside: (newDir, callback) ->
+    prevDir = process.cwd()
+    grunt.file.setBase newDir
+    callback -> grunt.file.setBase(prevDir)

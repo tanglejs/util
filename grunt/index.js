@@ -24,6 +24,14 @@
           return done();
         });
       });
+    },
+    inside: function(newDir, callback) {
+      var prevDir;
+      prevDir = process.cwd();
+      grunt.file.setBase(newDir);
+      return callback(function() {
+        return grunt.file.setBase(prevDir);
+      });
     }
   };
 
