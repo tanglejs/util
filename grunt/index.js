@@ -25,7 +25,7 @@
         });
       });
     },
-    inside: function(newDir, callback) {
+    inside: function(newDir, grunt, callback) {
       var prevDir;
       prevDir = process.cwd();
       grunt.file.setBase(newDir);

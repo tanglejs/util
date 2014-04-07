@@ -29,7 +29,7 @@ module.exports =
 
   # Run a function in a different grunt base path
   # Not async safe.
-  inside: (newDir, callback) ->
+  inside: (newDir, grunt, callback) ->
     prevDir = process.cwd()
     grunt.file.setBase newDir
     callback -> grunt.file.setBase(prevDir)
